@@ -1,6 +1,6 @@
 This is the administration side of My movie review site.
 ------------------------------------------------
-these are the requirements for the admin side
+these are the goals for the admin side
 ------------------------------------------------
 The app's users can create, read, update, and delete (CRUD) movie data stored in a database.
 
