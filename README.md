@@ -9,6 +9,7 @@ The movie data includes title, synopsis, genre, rating (e.g., PG-13), runtime ho
 The admin app displays a summary list of all the movies in the database. Movies must be sorted by release date and links or buttons are displayed to add a new movie and view/update/delete an existing movie.
 
 The app uses good design principles and incorporates the website's "brand".
+
 ------------------------------------------------
 currently no requirements are met
 ------------------------------------------------
