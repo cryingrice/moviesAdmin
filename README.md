@@ -10,6 +10,8 @@ The admin app displays a summary list of all the movies in the database. Movies 
 
 The app uses good design principles and incorporates the website's "brand".
 
+movie critics will also use this app to post movie reviews. 
+
 ------------------------------------------------
 currently no requirements are met
 ------------------------------------------------
