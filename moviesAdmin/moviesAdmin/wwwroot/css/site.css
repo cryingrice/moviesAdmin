@@ -29,3 +29,91 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+/* Brand  */
+:root {
+    --brand-primary: #14213d; /* deep navy */
+    --brand-accent: #fca311; /* gold */
+    --brand-accent-dark: #d98a0b;
+    --brand-bg: #f5f6fa;
+    --brand-text: #1d1d1f;
+}
+
+body {
+    background-color: var(--brand-bg);
+    color: var(--brand-text);
+}
+
+h1, h2, h3 {
+    color: var(--brand-primary);
+    font-weight: 700;
+}
+
+a {
+    color: var(--brand-primary);
+}
+
+    a:hover {
+        color: var(--brand-accent-dark);
+    }
+
+/* Navbar */
+.brand-navbar {
+    background-color: var(--brand-primary);
+    border-bottom: 3px solid var(--brand-accent);
+    height: 45px;
+}
+
+    .brand-navbar .navbar-brand,
+    .brand-navbar .nav-link {
+        color: #fff;
+    }
+
+        .brand-navbar .nav-link:hover {
+            color: var(--brand-accent);
+        }
+
+        .brand-navbar .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+/* Buttons */
+.btn-primary {
+    --bs-btn-bg: var(--brand-accent);
+    --bs-btn-border-color: var(--brand-accent);
+    --bs-btn-color: var(--brand-primary);
+    --bs-btn-hover-bg: var(--brand-accent-dark);
+    --bs-btn-hover-border-color: var(--brand-accent-dark);
+    --bs-btn-hover-color: var(--brand-primary);
+    --bs-btn-active-bg: var(--brand-accent-dark);
+    --bs-btn-active-border-color: var(--brand-accent-dark);
+    --bs-btn-active-color: var(--brand-primary);
+    font-weight: 600;
+}
+
+/* Tables (movie list) */
+.table thead th {
+    background-color: var(--brand-primary);
+    color: #fff;
+    border: none;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(252, 163, 17, 0.12);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--brand-primary);
+    color: #ddd;
+}
+
+    .footer a {
+        color: var(--brand-accent);
+    }
+
+/* Form focus ring in brand color */
+.form-control:focus, .form-select:focus {
+    border-color: var(--brand-accent);
+    box-shadow: 0 0 0 0.2rem rgba(252, 163, 17, 0.25);
+}

@@ -6,9 +6,9 @@
         public int Id { get; set; }
         public required string Title { get; set; }
         public string? Genre { get; set; }
-        public string? Rating { get; set; }
+        public required string Rating { get; set; }
         public string? Synopsis { get; set; }
         public int Runtime { get; set; }
-        public DateOnly Releasedate { get; set; }
+        public DateOnly ReleaseDate { get; set; }
     }
 }
