@@ -1,10 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using MoviesAdmin;
+using Azure.Storage.Blobs;
+using MoviesAdmin.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<AzureBlobService>();
+// Register EF Core DbContext
 builder.Services.AddDbContext<MoviesAdminContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MoviesAdminContext")));
 
