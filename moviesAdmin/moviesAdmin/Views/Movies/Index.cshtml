@@ -9,52 +9,54 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table movie-table">
     <thead>
         <tr>
-            <th>
+            <th class="poster-column">
+                Poster
+            </th>
+            <th class="title-column">
                 @Html.DisplayNameFor(model => model.Title)
             </th>
-            <th>
+            <th class="genre-column">
                 @Html.DisplayNameFor(model => model.Genre)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Rating)
-            </th>
-            <th>
+            <th class="synopsis-column">
                 @Html.DisplayNameFor(model => model.Synopsis)
             </th>
-            <th>
+            <th class="runtime-column">
                 @Html.DisplayNameFor(model => model.Runtime)
             </th>
-            <th>
+            <th class="release-date-column">
                 @Html.DisplayNameFor(model => model.ReleaseDate)
             </th>
-            <th></th>
+            <th class="actions-column"></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td class="poster-column">
+                <img src="@item.PosterUrl" alt="Poster" style="width: 100px; height: auto;" />
+            </td>
+            <td class="title-column">
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genre)
+            <td class="genre-column">
+                    @Html.DisplayFor(modelItem => item.Genre.Title)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
+            <td class="synopsis-column">
+                @(item.Synopsis?.Length > 200
+                    ? item.Synopsis[..200] + "..."
+                    : item.Synopsis)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Synopsis)
-            </td>
-            <td>
+            <td class="runtime-column">
                 @Html.DisplayFor(modelItem => item.Runtime)
             </td>
-            <td>
+            <td class="release-date-column">
                 @Html.DisplayFor(modelItem => item.ReleaseDate)
             </td>
-            <td>
+            <td class="actions-column">
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
